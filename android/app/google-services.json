@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "142175858909",
+    "project_id": "eve-tech-21a45",
+    "storage_bucket": "eve-tech-21a45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142175858909:android:8cfe94dfe8404121e86b34",
+        "android_client_info": {
+          "package_name": "com.example.flutter_eve_fadillarizky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142175858909-mnfinof3erevh9its3nl6lt56mt0mhqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFGpsnCFOPvN_sbg2HlbtLmGcHajC2Oo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142175858909-mnfinof3erevh9its3nl6lt56mt0mhqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142175858909:android:d0973e4694c6e7d4e86b34",
+        "android_client_info": {
+          "package_name": "com.example.flutter_eve_fadillarizkygusnadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142175858909-mnfinof3erevh9its3nl6lt56mt0mhqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFGpsnCFOPvN_sbg2HlbtLmGcHajC2Oo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142175858909-mnfinof3erevh9its3nl6lt56mt0mhqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
