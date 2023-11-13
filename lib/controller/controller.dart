@@ -17,8 +17,8 @@ class Controller extends GetxController {
 
     signInGoogle()async{
     await _googleSignIn.value.signIn().then((value) async{
-       username.value = value!.displayName!;
-       photourl.value = value.photoUrl!;
+       username.value = value!.displayName ?? "";
+       photourl.value = value.photoUrl ?? "";
     });
     Get.offAll(ProfilePage());
    }

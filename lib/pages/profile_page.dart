@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import '../controller/controller.dart';
 
 class ProfilePage extends StatelessWidget {
-
   final controller = Get.put(Controller());
 
   @override
@@ -24,8 +23,7 @@ class ProfilePage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Color(0x698becd0)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12))))),
-              onPressed: () {
-              },
+              onPressed: () {},
               icon: Icon(Icons.settings)),
           PopupMenuButton(
             position: PopupMenuPosition.under,
@@ -33,9 +31,11 @@ class ProfilePage extends StatelessWidget {
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
                     color: Color(0x698becd0),
-                    borderRadius: BorderRadius.all(Radius.circular(12))
-                ),
-                child: Icon(Icons.more_vert,color: Color(0xff398d42),)),
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
+                child: Icon(
+                  Icons.more_vert,
+                  color: Color(0xff398d42),
+                )),
             itemBuilder: (context) => [
               const PopupMenuItem(
                 value: 'logout',
@@ -46,7 +46,6 @@ class ProfilePage extends StatelessWidget {
               switch (item) {
                 case "logout":
                   controller.signOutGoogle();
-
               }
             },
           ),
@@ -63,24 +62,27 @@ class ProfilePage extends StatelessWidget {
             Center(
               child: Column(
                 children: [
-                  Stack(
-                    children: [
-                      CircleAvatar(
-                        radius: 50,
-                        backgroundImage: Image
-                            .network(controller.photourl.value)
-                            .image,
-                      ),
-                    ],
-                  ),
+                  controller.photourl.value != ""
+                      ? CircleAvatar(
+                          radius: 50,
+                          backgroundImage:
+                              Image.network(controller.photourl.value).image)
+                      : CircleAvatar(
+                          backgroundColor: Colors.green,
+                          radius: 50,
+                          child: Text(
+                            controller.username.value[0],
+                            style: TextStyle(
+                                fontSize: 35, fontWeight: FontWeight.bold),
+                          )),
                   SizedBox(
                     height: 20,
                   ),
                   Obx(() {
                     return Text(
                       controller.username.value,
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     );
                   }),
                 ],
@@ -173,7 +175,7 @@ class ProfilePage extends StatelessWidget {
                           Text(
                             "My wallet balance",
                             style:
-                            TextStyle(color: Colors.black38, fontSize: 10),
+                                TextStyle(color: Colors.black38, fontSize: 10),
                           ),
                         ],
                       ),
@@ -183,7 +185,7 @@ class ProfilePage extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: Color(0xff398d42))),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.green)),
+                                MaterialStateProperty.all(Colors.green)),
                         onPressed: () {},
                         child: Text("Top up"))
                   ],

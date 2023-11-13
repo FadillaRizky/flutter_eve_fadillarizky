@@ -37,7 +37,10 @@ class _SplashScreenState extends State<SplashScreen> {
           () async {
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setBool('isFirstTime', false);
-        Get.offAll(MainScreen());
+        Get.offAll(
+          transition:  Transition.fade,
+            duration: Duration(seconds: 3),
+            MainScreen());
       },
     );
     return Scaffold(
